@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EDC6ECB2992E1CC00A17AC1 /* Cabinet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6EC92992E1CC00A17AC1 /* Cabinet.swift */; };
+		0EDC6ECC2992E1CC00A17AC1 /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6ECA2992E1CC00A17AC1 /* NumberView.swift */; };
+		0EDC6ED12992E1DD00A17AC1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6ECE2992E1DD00A17AC1 /* Model.swift */; };
+		0EDC6ED22992E1DD00A17AC1 /* NumberAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6ED02992E1DD00A17AC1 /* NumberAPI.swift */; };
 		0EFFF9462992B45D0033EDA5 /* HistoryDigitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFF9452992B45D0033EDA5 /* HistoryDigitApp.swift */; };
 		0EFFF9482992B45D0033EDA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFF9472992B45D0033EDA5 /* ContentView.swift */; };
 		0EFFF94A2992B45F0033EDA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EFFF9492992B45F0033EDA5 /* Assets.xcassets */; };
@@ -14,6 +18,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EDC6EC92992E1CC00A17AC1 /* Cabinet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cabinet.swift; sourceTree = "<group>"; };
+		0EDC6ECA2992E1CC00A17AC1 /* NumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
+		0EDC6ECE2992E1DD00A17AC1 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		0EDC6ED02992E1DD00A17AC1 /* NumberAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberAPI.swift; sourceTree = "<group>"; };
+		0EDC6ED32992E38700A17AC1 /* testing.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = testing.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		0EDC6ED42992E87900A17AC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0EFFF9422992B45D0033EDA5 /* HistoryDigit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HistoryDigit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EFFF9452992B45D0033EDA5 /* HistoryDigitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDigitApp.swift; sourceTree = "<group>"; };
 		0EFFF9472992B45D0033EDA5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,9 +42,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EDC6EC82992E1CC00A17AC1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0EDC6EC92992E1CC00A17AC1 /* Cabinet.swift */,
+				0EDC6ECA2992E1CC00A17AC1 /* NumberView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0EDC6ECD2992E1DD00A17AC1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0EDC6ECE2992E1DD00A17AC1 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0EDC6ECF2992E1DD00A17AC1 /* NumberAPI */ = {
+			isa = PBXGroup;
+			children = (
+				0EDC6ED02992E1DD00A17AC1 /* NumberAPI.swift */,
+			);
+			path = NumberAPI;
+			sourceTree = "<group>";
+		};
 		0EFFF9392992B45D0033EDA5 = {
 			isa = PBXGroup;
 			children = (
+				0EDC6ED32992E38700A17AC1 /* testing.playground */,
 				0EFFF9442992B45D0033EDA5 /* HistoryDigit */,
 				0EFFF9432992B45D0033EDA5 /* Products */,
 			);
@@ -51,6 +87,10 @@
 		0EFFF9442992B45D0033EDA5 /* HistoryDigit */ = {
 			isa = PBXGroup;
 			children = (
+				0EDC6ED42992E87900A17AC1 /* Info.plist */,
+				0EDC6ECD2992E1DD00A17AC1 /* Model */,
+				0EDC6ECF2992E1DD00A17AC1 /* NumberAPI */,
+				0EDC6EC82992E1CC00A17AC1 /* View */,
 				0EFFF9452992B45D0033EDA5 /* HistoryDigitApp.swift */,
 				0EFFF9472992B45D0033EDA5 /* ContentView.swift */,
 				0EFFF9492992B45F0033EDA5 /* Assets.xcassets */,
@@ -137,8 +177,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EDC6ED12992E1DD00A17AC1 /* Model.swift in Sources */,
+				0EDC6ECB2992E1CC00A17AC1 /* Cabinet.swift in Sources */,
 				0EFFF9482992B45D0033EDA5 /* ContentView.swift in Sources */,
 				0EFFF9462992B45D0033EDA5 /* HistoryDigitApp.swift in Sources */,
+				0EDC6ECC2992E1CC00A17AC1 /* NumberView.swift in Sources */,
+				0EDC6ED22992E1DD00A17AC1 /* NumberAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +314,7 @@
 				DEVELOPMENT_TEAM = 6RFGZKG2P5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HistoryDigit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +344,7 @@
 				DEVELOPMENT_TEAM = 6RFGZKG2P5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HistoryDigit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

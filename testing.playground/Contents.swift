@@ -13,7 +13,6 @@ enum TypeAPI {
     case trivia(query: String)
     case date(query: String)
     case year(query: String)
-    case random
     
     var baseURL: String {"http://numbersapi.com/"}
     
@@ -24,7 +23,6 @@ enum TypeAPI {
         case .date: return "date"
         case .year: return "year"
         case .trivia: return "trivia"
-        case .random: return "random"
         }
     }
     
@@ -59,12 +57,7 @@ enum TypeAPI {
             
             let percentEncodedString = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? query
             url += "\(percentEncodedString)/"
-        
-        case .random:
-            url += "/"
         }
-        
-            
         
         url += self.path
         url += "?json"
@@ -78,7 +71,6 @@ enum TypeAPI {
 class NumberAPI {
     
     static let shared = NumberAPI()
-    static var number: Number?
     
     private let session = URLSession.shared
     private let jsonDecoder: JSONDecoder = {
@@ -87,36 +79,16 @@ class NumberAPI {
         return decoder
     }()
     
-
-    func getMath(query: String, completion: @escaping ()-> Void ) {
-        let request = TypeAPI.math(query: query).request
-        self.session.dataTask(with: request) { data, response, error in
-            if error == nil {
-                do {
-                    let number = try NumberAPI.shared.jsonDecoder.decode(Number.self, from: data!)
-                    NumberAPI.number = number
-                    print(number)
-                    completion()
-                    
-                } catch {
-                    print(error)
-                    print("JSON Error (MATH)")
-                }
-                
-            }
-            
-        }.resume()
+    
+    func getMath(query: String, completion: @escaping (Number)-> Void ) {
+        let request = TypeAPI.math(query: <#T##String#>)
     }
     
     func getTrivia() {
         
     }
     
-    func getDate() {
-        
-    }
-    
-    func getYear() {
+    func detDate() {
         
     }
     
@@ -125,3 +97,10 @@ class NumberAPI {
     }
     
 }
+
+var ff = TypeAPI.year(query: "1992").fullURL
+print(ff)
+
+var url: TypeAPI = .math(query: "42")
+var full = url.fullURL
+print(full)

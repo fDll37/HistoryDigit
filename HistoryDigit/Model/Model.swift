@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Number {
+struct Number: Equatable, Decodable {
     
-    let text: Int?
-    let found: Bool?
+    let text: String
+    let found: Bool
     let number: Int?
     let type: String?
     let date: String?
