@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Number: Equatable, Decodable {
+struct Number: Codable {
     
     let text: String
     let found: Bool

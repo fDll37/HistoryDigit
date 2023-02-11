@@ -59,12 +59,10 @@ enum TypeAPI {
             
             let percentEncodedString = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? query
             url += "\(percentEncodedString)/"
-        
-        case .random:
-            url += "/"
-        }
-        
             
+        case .random:
+            url += ""
+        }
         
         url += self.path
         url += "?json"
@@ -87,17 +85,16 @@ class NumberAPI {
         return decoder
     }()
     
-
-    func getMath(query: String, completion: @escaping ()-> Void ) {
+    
+    func getMath(query: String, completion: @escaping (Number)-> Void ) {
         let request = TypeAPI.math(query: query).request
         self.session.dataTask(with: request) { data, response, error in
             if error == nil {
                 do {
                     let number = try NumberAPI.shared.jsonDecoder.decode(Number.self, from: data!)
-                    NumberAPI.number = number
-                    print(number)
-                    completion()
-                    
+                    DispatchQueue.main.async {
+                        completion(number)
+                    }
                 } catch {
                     print(error)
                     print("JSON Error (MATH)")
@@ -108,20 +105,76 @@ class NumberAPI {
         }.resume()
     }
     
-    func getTrivia() {
-        
+    func getTrivia(query: String, completion: @escaping (Number)-> Void ) {
+        let request = TypeAPI.trivia(query: query).request
+        self.session.dataTask(with: request) { data, response, error in
+            if error == nil {
+                do {
+                    let number = try NumberAPI.shared.jsonDecoder.decode(Number.self, from: data!)
+                    DispatchQueue.main.async {
+                        completion(number)
+                    }
+                } catch {
+                    print(error)
+                    print("JSON Error (TRIVIA)")
+                }
+            }
+            
+        }.resume()
     }
     
-    func getDate() {
-        
+    func getDate(query: String, completion: @escaping (Number)-> Void) {
+        let request = TypeAPI.date(query: query).request
+        self.session.dataTask(with: request) { data, response, error in
+            if error == nil {
+                do {
+                    let number = try NumberAPI.shared.jsonDecoder.decode(Number.self, from: data!)
+                    DispatchQueue.main.async {
+                        completion(number)
+                    }
+                } catch {
+                    print(error)
+                    print("JSON Error (DATE)")
+                }
+            }
+            
+        }.resume()
     }
     
-    func getYear() {
-        
+    func getYear(query: String, completion: @escaping (Number)-> Void) {
+        let request = TypeAPI.year(query: query).request
+        self.session.dataTask(with: request) { data, response, error in
+            if error == nil {
+                do {
+                    let number = try NumberAPI.shared.jsonDecoder.decode(Number.self, from: data!)
+                    DispatchQueue.main.async {
+                        completion(number)
+                    }
+                } catch {
+                    print(error)
+                    print("JSON Error (YEAR)")
+                }
+            }
+            
+        }.resume()
     }
     
-    func getRandom() {
-        
+    func getRandom(completion: @escaping (Number)-> Void) {
+        let request = TypeAPI.random.request
+        self.session.dataTask(with: request) { data, response, error in
+            if error == nil {
+                do {
+                    let number = try NumberAPI.shared.jsonDecoder.decode(Number.self, from: data!)
+                    DispatchQueue.main.async {
+                        completion(number)
+                    }
+                } catch {
+                    print(error)
+                    print("JSON Error (RANDOM)")
+                }
+            }
+            
+        }.resume()
     }
     
 }

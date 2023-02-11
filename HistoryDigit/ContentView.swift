@@ -9,16 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State var number: Number? = NumberAPI.number
+    @State var tabSelected: Int = 0
 
     var body: some View {
-
-        var math = NumberAPI.shared.getMath(query: "4") {
-            self.number = NumberAPI.number
+        TabView(selection: $tabSelected){
+//            SearchView(text: .constant(""))
+            NumberView()
+                .tabItem {
+                    Label("Search", systemImage: "bonjour")
+                }
+                .tag(0)
+            StatisticView()
+                .tabItem{
+                    Label("Statistic", systemImage: "list.number")
+                }
+                .tag(1)
+            CabinetView()
+                .tabItem{
+                    Label("My Numbers", systemImage: "person.fill")
+                }
+                .tag(2)
         }
-        Text("Hello, world!")
-        Text(number?.text ?? "Not text")
-            .padding()
+        
     }
     
 }
