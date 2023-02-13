@@ -14,7 +14,9 @@ struct CabinetView: View {
         NavigationView {
             VStack {
                 DiagramView()
+                Spacer()
                 Text("Cabinet with my config")
+                Spacer()
                 GistogramView()
             }
             .toolbar {
