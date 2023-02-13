@@ -13,6 +13,21 @@ struct SaveNumber: Codable, Identifiable {
     let number: Int
     let text: String
     let type: String
-    let date: String?
-    let year: String?
+}
+
+enum TypeNumber {
+    case math
+    case trivia
+    case date
+    case year
+    
+    var value: String {
+        
+        switch self {
+        case .math: return "math"
+        case .date: return "date"
+        case .year: return "year"
+        case .trivia: return "trivia"
+        }
+    }
 }

@@ -8,25 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
-
+    
+    @ObservedObject var listNumber = NumberList()
     @State var tabSelected: Int = 0
 
     var body: some View {
         TabView(selection: $tabSelected){
-//            SearchView(text: .constant(""))
-            NumberView()
+            SearchView(listNumber: listNumber)
+//            NumberView()
                 .tabItem {
                     Label("Search", systemImage: "bonjour")
                 }
                 .tag(0)
-            StatisticView()
-                .tabItem{
-                    Label("Statistic", systemImage: "list.number")
-                }
-                .tag(1)
             CabinetView()
                 .tabItem{
-                    Label("My Numbers", systemImage: "person.fill")
+                    Label("Cabinet", systemImage: "person.fill")
+                }
+                .tag(1)
+            AboutMeView()
+                .tabItem{
+                    Label("About dev", systemImage: "desktopcomputer")
                 }
                 .tag(2)
         }
