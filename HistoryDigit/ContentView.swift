@@ -9,12 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var listNumber = NumberList()
     @State var tabSelected: Int = 0
 
     var body: some View {
         TabView(selection: $tabSelected){
-            SearchView(listNumber: listNumber)
+            SearchView()
 //            NumberView()
                 .tabItem {
                     Label("Search", systemImage: "bonjour")

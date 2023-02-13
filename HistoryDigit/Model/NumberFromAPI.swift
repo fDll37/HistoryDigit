@@ -1,5 +1,5 @@
 //
-//  Model.swift
+//  NumberFromAPI.swift
 //  HistoryDigit
 //
 //  Created by Данил Менделев on 07.02.2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Number: Codable {
+struct NumberFromAPI: Codable {
     
     let text: String
     let found: Bool
@@ -18,6 +18,22 @@ struct Number: Codable {
 
 }
 
+enum TypeNumber {
+    case math
+    case trivia
+    case date
+    case year
+    
+    var value: String {
+        
+        switch self {
+        case .math: return "math"
+        case .date: return "date"
+        case .year: return "year"
+        case .trivia: return "trivia"
+        }
+    }
+}
 
 
 // text: A string of the fact text itself.

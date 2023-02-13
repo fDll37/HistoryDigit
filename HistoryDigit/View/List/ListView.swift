@@ -8,27 +8,32 @@
 import SwiftUI
 
 struct ListView: View {
+    @Environment(\.managedObjectContext)
+    var moc
     
-    @ObservedObject var listNumbers = NumberList()
+    @FetchRequest(sortDescriptors: [])
+    var numbers: FetchedResults<Number>
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(listNumbers.listNumber) { index in
-                    ElementListView(element: $listNumbers.listNumber[index])
+                ForEach(numbers) { number in
+                    ElementListView(element: number)
                 }
-                .onMove(perform: listNumbers.moveListItem)
-                .onDelete(perform: listNumbers.deleteListItem)
-                .onAppear() {
-                    listNumbers.saveListItems()
-                    listNumbers.printChecklistContents()
-                }
+                .onDelete(perform: { indexSet in
+                    let number = self.numbers[indexSet.first!]
+                    self.moc.delete(number)
+                    try! self.moc.save()
+                })
             }
+            
             .navigationBarItems(trailing: EditButton())
             .navigationTitle("Список элементов")
             
+            
+            
         }
-
+        
     }
 }
 

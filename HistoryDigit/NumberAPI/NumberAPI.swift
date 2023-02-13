@@ -86,12 +86,12 @@ class NumberAPI {
     }()
     
     
-    func getMath(query: String, completion: @escaping (Number)-> Void ) {
+    func getMath(query: String, completion: @escaping (NumberFromAPI)-> Void ) {
         let request = TypeAPI.math(query: query).request
         self.session.dataTask(with: request) { data, response, error in
             if error == nil {
                 do {
-                    let number = try NumberAPI.shared.jsonDecoder.decode(Number.self, from: data!)
+                    let number = try NumberAPI.shared.jsonDecoder.decode(NumberFromAPI.self, from: data!)
                     DispatchQueue.main.async {
                         completion(number)
                     }
@@ -105,12 +105,12 @@ class NumberAPI {
         }.resume()
     }
     
-    func getTrivia(query: String, completion: @escaping (Number)-> Void ) {
+    func getTrivia(query: String, completion: @escaping (NumberFromAPI)-> Void ) {
         let request = TypeAPI.trivia(query: query).request
         self.session.dataTask(with: request) { data, response, error in
             if error == nil {
                 do {
-                    let number = try NumberAPI.shared.jsonDecoder.decode(Number.self, from: data!)
+                    let number = try NumberAPI.shared.jsonDecoder.decode(NumberFromAPI.self, from: data!)
                     DispatchQueue.main.async {
                         completion(number)
                     }
@@ -123,12 +123,12 @@ class NumberAPI {
         }.resume()
     }
     
-    func getDate(query: String, completion: @escaping (Number)-> Void) {
+    func getDate(query: String, completion: @escaping (NumberFromAPI)-> Void) {
         let request = TypeAPI.date(query: query).request
         self.session.dataTask(with: request) { data, response, error in
             if error == nil {
                 do {
-                    let number = try NumberAPI.shared.jsonDecoder.decode(Number.self, from: data!)
+                    let number = try NumberAPI.shared.jsonDecoder.decode(NumberFromAPI.self, from: data!)
                     DispatchQueue.main.async {
                         completion(number)
                     }
@@ -141,12 +141,12 @@ class NumberAPI {
         }.resume()
     }
     
-    func getYear(query: String, completion: @escaping (Number)-> Void) {
+    func getYear(query: String, completion: @escaping (NumberFromAPI)-> Void) {
         let request = TypeAPI.year(query: query).request
         self.session.dataTask(with: request) { data, response, error in
             if error == nil {
                 do {
-                    let number = try NumberAPI.shared.jsonDecoder.decode(Number.self, from: data!)
+                    let number = try NumberAPI.shared.jsonDecoder.decode(NumberFromAPI.self, from: data!)
                     DispatchQueue.main.async {
                         completion(number)
                     }
@@ -159,12 +159,12 @@ class NumberAPI {
         }.resume()
     }
     
-    func getRandom(completion: @escaping (Number)-> Void) {
+    func getRandom(completion: @escaping (NumberFromAPI)-> Void) {
         let request = TypeAPI.random.request
         self.session.dataTask(with: request) { data, response, error in
             if error == nil {
                 do {
-                    let number = try NumberAPI.shared.jsonDecoder.decode(Number.self, from: data!)
+                    let number = try NumberAPI.shared.jsonDecoder.decode(NumberFromAPI.self, from: data!)
                     DispatchQueue.main.async {
                         completion(number)
                     }

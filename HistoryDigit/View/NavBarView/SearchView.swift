@@ -8,29 +8,26 @@
 import SwiftUI
 
 struct SearchView: View {
-    
-//    @Environment(\.presentationMode) var presentationMode
-    var listNumber: NumberList
+    @Environment(\.managedObjectContext) var moc
     
     var body: some View {
         
-        Button(action: {
-            let newNumber = SaveNumber(number: 6, text: "This is SIX", type: TypeNumber.math.value)
-            self.listNumber.listNumber.append(newNumber)
-            self.listNumber.saveListItems()
-//            self.presentationMode.wrappedValue.dismiss()
-        }) {
-            HStack {
-                Image(systemName: "plus.circle.fill")
-                Text("добавить новое число")
-            }
+        Button("Add") {
+            let number = Number(context: moc)
+            number.id = UUID()
+            number.text = "Test text"
+            number.number = "6"
+            number.type = TypeNumber.math.value
+            
+            try? moc.save()
         }
+
         
     }
 }
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView(listNumber: NumberList())
+        SearchView()
     }
 }

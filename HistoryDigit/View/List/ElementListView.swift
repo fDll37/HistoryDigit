@@ -6,22 +6,23 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ElementListView: View {
-    
-    @Binding var element: SaveNumber
+
+    @ObservedObject var element: Number
     
     var body: some View {
         VStack {
-            Text("Число - \(element.number).")
-            Text("Значение - \(element.text).")
-            Text("Тип данных - \(element.type)")
+            Text("Число - \(element.number ?? "").")
+            Text("Значение - \(element.text ?? "").")
+            Text("Тип данных - \(element.type ?? "")")
         }
     }
 }
 
 struct ElementListView_Previews: PreviewProvider {
     static var previews: some View {
-        ElementListView(element: .constant(SaveNumber(number: 4, text: "This is FOUR", type: TypeNumber.math.value)) )
+        ElementListView(element: Number())
     }
 }
