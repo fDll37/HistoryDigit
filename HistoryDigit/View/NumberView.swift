@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct NumberView: View {
-    
-    @State var numberMath: Number?
-    @State var numberTrivia: Number?
-    @State var numberRandom: Number?
-    
-    
+
+    @State var numberMath: NumberFromAPI?
+    @State var numberTrivia: NumberFromAPI?
+    @State var numberRandom: NumberFromAPI?
+
+
     var body: some View {
         Group{
             VStack {
@@ -46,7 +46,7 @@ struct NumberView: View {
                 }
             }
         }
-        
+
     }
 }
 
