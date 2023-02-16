@@ -16,26 +16,27 @@ struct DiagramView: View {
     @FetchRequest(sortDescriptors: [])
     var numbers: FetchedResults<Number>
     
-    
     var body: some View {
-        HStack {
-            charCircleView
-            .frame(width: 150, height: 300, alignment: .trailing)
-                .onAppear() {
-                    self.charDataObj.calcOfPathDiagram(numbers: numbers)
+        VStack {
+            Text("Circle diagram")
+                .font(.system(size: 28))
+                .fontWeight(.medium)
+            HStack {
+                charCircleView
+                .frame(width: 150, height: 200, alignment: .trailing)
+                    .onAppear() {
+                        self.charDataObj.calcOfPathDiagram(numbers: numbers)
+                    }
+                VStack {
+                    charListView
+                        .padding(8)
+                        .frame(width: 100, height: 20, alignment: .trailing)
                 }
-            VStack {
-                charListView
-                    .padding(8)
-                    .frame(width: 100, height: 20, alignment: .trailing)
+                .frame(width: 200, alignment: .trailing)
             }
-            .frame(width: 200, alignment: .trailing)
-
         }
-        
     }
 }
-
 
 extension DiagramView {
     
@@ -48,7 +49,6 @@ extension DiagramView {
                     .stroke(charDataObj.charData[index].color, lineWidth: 25)
                     .scaleEffect(index == indexOfTappedSlice ? 1.1 : 1.0)
                     .animation(.spring())
-                
             }
         }
     }
@@ -66,11 +66,8 @@ extension DiagramView {
                     .fill(charDataObj.charData[index].color)
                     .frame(width: 20, height: 20)
             }
-            
         }
     }
-    
-    
 }
 
 struct DiagramView_Previews: PreviewProvider {

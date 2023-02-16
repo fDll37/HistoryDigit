@@ -15,9 +15,7 @@ struct CabinetView: View {
             VStack {
                 DiagramView()
                 Spacer()
-                Text("Cabinet with my config")
-                Spacer()
-                GistogramView()
+                HistogramView()
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {

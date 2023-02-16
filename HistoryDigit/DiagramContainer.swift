@@ -6,25 +6,16 @@
 //
 
 import Foundation
-import SwiftUI
 import CoreData
-
-struct PieceOfDiagram {
-    let id = UUID()
-    let color: Color
-    var percent: CGFloat
-    var value: CGFloat
-    var type: String
-}
-
+import SwiftUI
 
 class DiagramContainer: ObservableObject {
     
     @Published var charData = [
-        PieceOfDiagram(color: Color(#colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)), percent: 0, value: 0, type: "math"),
-        PieceOfDiagram(color: Color(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)), percent: 0, value: 0, type: "trivia"),
-        PieceOfDiagram(color: Color(#colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)), percent: 0, value: 0, type: "date"),
-        PieceOfDiagram(color: Color(#colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)), percent: 0, value: 0, type: "year")
+        PieceOfDiagram(color: .blue, percent: 0, value: 0, type: "math"),
+        PieceOfDiagram(color: .orange, percent: 0, value: 0, type: "trivia"),
+        PieceOfDiagram(color: .red, percent: 0, value: 0, type: "date"),
+        PieceOfDiagram(color: .green, percent: 0, value: 0, type: "year")
     ]
     
     func calcOfPathDiagram(numbers: FetchedResults<Number>) {
