@@ -98,9 +98,22 @@ class NumberAPI {
     
 }
 
-var ff = TypeAPI.year(query: "1992").fullURL
-print(ff)
+//var ff = TypeAPI.year(query: "1992").fullURL
+//print(ff)
+//
+//var url: TypeAPI = .math(query: "42")
+//var full = url.fullURL
+//print(full)
 
-var url: TypeAPI = .math(query: "42")
-var full = url.fullURL
-print(full)
+
+let number = 10
+
+switch number {
+case 10:
+    print("10")
+    fallthrough
+case 12:
+    print("12")
+default:
+    print("default")
+}

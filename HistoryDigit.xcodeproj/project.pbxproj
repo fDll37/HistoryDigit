@@ -12,6 +12,7 @@
 		0E959573299A7098008337A9 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E959572299A7098008337A9 /* ListView.swift */; };
 		0E959577299A7A1B008337A9 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E959576299A7A1B008337A9 /* DataController.swift */; };
 		0E959584299AA4E5008337A9 /* Numbers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E959582299AA4E5008337A9 /* Numbers.xcdatamodeld */; };
+		0E959586299D9A84008337A9 /* DiagramContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E959585299D9A84008337A9 /* DiagramContainer.swift */; };
 		0EDC6ECB2992E1CC00A17AC1 /* CabinetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6EC92992E1CC00A17AC1 /* CabinetView.swift */; };
 		0EDC6ECC2992E1CC00A17AC1 /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6ECA2992E1CC00A17AC1 /* NumberView.swift */; };
 		0EDC6ED12992E1DD00A17AC1 /* NumberFromAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6ECE2992E1DD00A17AC1 /* NumberFromAPI.swift */; };
@@ -31,6 +32,7 @@
 		0E959572299A7098008337A9 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		0E959576299A7A1B008337A9 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		0E959583299AA4E5008337A9 /* Numbers.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Numbers.xcdatamodel; sourceTree = "<group>"; };
+		0E959585299D9A84008337A9 /* DiagramContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramContainer.swift; sourceTree = "<group>"; };
 		0EDC6EC92992E1CC00A17AC1 /* CabinetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CabinetView.swift; sourceTree = "<group>"; };
 		0EDC6ECA2992E1CC00A17AC1 /* NumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
 		0EDC6ECE2992E1DD00A17AC1 /* NumberFromAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberFromAPI.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		0EDC6ECD2992E1DD00A17AC1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0E959585299D9A84008337A9 /* DiagramContainer.swift */,
 				0EDC6ECE2992E1DD00A17AC1 /* NumberFromAPI.swift */,
 			);
 			path = Model;
@@ -223,6 +226,7 @@
 			files = (
 				0E959573299A7098008337A9 /* ListView.swift in Sources */,
 				0E959577299A7A1B008337A9 /* DataController.swift in Sources */,
+				0E959586299D9A84008337A9 /* DiagramContainer.swift in Sources */,
 				0EDC6EDC2997BF9F00A17AC1 /* AboutMeView.swift in Sources */,
 				0EDC6EDE2997C0D700A17AC1 /* DiagramView.swift in Sources */,
 				0EDC6ED12992E1DD00A17AC1 /* NumberFromAPI.swift in Sources */,

@@ -17,7 +17,7 @@ struct SearchView: View {
             number.id = UUID()
             number.text = "Test text"
             number.number = "6"
-            number.type = TypeNumber.math.value
+            number.type = TypeNumber.trivia.value
             
             try? moc.save()
         }
