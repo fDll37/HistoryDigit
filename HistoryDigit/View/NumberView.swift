@@ -23,22 +23,22 @@ struct NumberView: View {
                     Text(numberMath?.type ?? "Non type")
 //                        .padding()
                 }
-//                Spacer()
+                Spacer()
                 Text("\(numberTrivia?.number ?? 0)")
                 Text(numberTrivia?.text ?? "Non text")
                 Text(numberTrivia?.type ?? "Non type")
 //                    .padding()
-//                Spacer()
+                Spacer()
                 Text("\(numberRandom?.number ?? 0)")
                 Text(numberRandom?.text ?? "Non text")
                 Text(numberRandom?.type ?? "Non type")
 //                    .padding()
 
             }.onAppear() {
-                NumberAPI.shared.getMath(query: "43") { insideNumber in
+                NumberAPI.shared.getMath(query: "37") { insideNumber in
                     self.numberMath = insideNumber
                 }
-                NumberAPI.shared.getTrivia(query: "43") { insideNumber in
+                NumberAPI.shared.getTrivia(query: "37") { insideNumber in
                     self.numberTrivia = insideNumber
                 }
                 NumberAPI.shared.getRandom(){ insideNumber in
