@@ -14,7 +14,6 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $tabSelected){
             SearchView()
-//            NumberView()
                 .tabItem {
                     Label("Search", systemImage: "bonjour")
                 }

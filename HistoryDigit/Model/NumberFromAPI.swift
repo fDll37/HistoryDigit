@@ -18,6 +18,14 @@ struct NumberFromAPI: Codable {
 
 }
 
+class FilterSearch {
+    
+    static let shared = FilterSearch()
+    var result: TypeNumber?
+    
+    private init() {}
+}
+
 enum TypeNumber {
     case math
     case trivia
@@ -33,6 +41,7 @@ enum TypeNumber {
         case .trivia: return "trivia"
         }
     }
+    
 }
 
 

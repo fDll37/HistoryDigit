@@ -9,7 +9,8 @@ import SwiftUI
 
 struct FilterView: View {
     
-    private var typeArray = ["math", "trivia", "date", "year"]
+    @State private var sendToSearchResult = FilterSearch.shared.result
+    private var typeArray: [TypeNumber] = [.math, .trivia, .date, .year]
     @State private var selectIndex = 0
     
     var body: some View {
@@ -19,17 +20,27 @@ struct FilterView: View {
             
             Picker(selection: $selectIndex, label: Text("")) {
                 ForEach(0..<typeArray.count) {
-                    Text(self.typeArray[$0])
+                    Text(String(self.typeArray[$0].value))
                 }
             }
             .padding()
             .frame(width: 200, height: 150, alignment: .center)
             
-            Text("вы выбрали: \(typeArray[selectIndex])")
+            Text("вы выбрали: \(typeArray[selectIndex].value)")
                 .padding()
                 .foregroundColor(.black)
                 .font(.headline)
                 .padding(.top, 10)
+            Button("Save choose") {
+                sendToSearchResult = typeArray[selectIndex]
+                print(sendToSearchResult?.value ?? "NON FILTER")
+//                sendToSearchResult = typeArray[selectIndex]
+            }
+            .background(.blue)
+            .foregroundColor(.black)
+            .fontWeight(.heavy)
+            .cornerRadius(5)
+            .frame(width: 130, alignment: .center)
         }
     }
 }

@@ -16,7 +16,7 @@
 		0E959588299DBA51008337A9 /* HistogramBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E959587299DBA51008337A9 /* HistogramBar.swift */; };
 		0E95958B299DC2A9008337A9 /* DiagramContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95958A299DC2A9008337A9 /* DiagramContainer.swift */; };
 		0E95958D299DC424008337A9 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95958C299DC424008337A9 /* FilterView.swift */; };
-		0E95958F299DCA16008337A9 /* ResultSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95958E299DCA16008337A9 /* ResultSearch.swift */; };
+		0E95958F299DCA16008337A9 /* ResultSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95958E299DCA16008337A9 /* ResultSearchView.swift */; };
 		0E959592299EB24C008337A9 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E959591299EB24C008337A9 /* AnimationView.swift */; };
 		0EDC6ECB2992E1CC00A17AC1 /* CabinetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6EC92992E1CC00A17AC1 /* CabinetView.swift */; };
 		0EDC6ECC2992E1CC00A17AC1 /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6ECA2992E1CC00A17AC1 /* NumberView.swift */; };
@@ -41,7 +41,7 @@
 		0E959587299DBA51008337A9 /* HistogramBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistogramBar.swift; sourceTree = "<group>"; };
 		0E95958A299DC2A9008337A9 /* DiagramContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramContainer.swift; sourceTree = "<group>"; };
 		0E95958C299DC424008337A9 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
-		0E95958E299DCA16008337A9 /* ResultSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSearch.swift; sourceTree = "<group>"; };
+		0E95958E299DCA16008337A9 /* ResultSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSearchView.swift; sourceTree = "<group>"; };
 		0E959591299EB24C008337A9 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
 		0EDC6EC92992E1CC00A17AC1 /* CabinetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CabinetView.swift; sourceTree = "<group>"; };
 		0EDC6ECA2992E1CC00A17AC1 /* NumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				0E95958C299DC424008337A9 /* FilterView.swift */,
-				0E95958E299DCA16008337A9 /* ResultSearch.swift */,
+				0E95958E299DCA16008337A9 /* ResultSearchView.swift */,
 				0EDC6ED72993D81800A17AC1 /* SearchView.swift */,
 				0E959591299EB24C008337A9 /* AnimationView.swift */,
 			);
@@ -260,7 +260,7 @@
 				0E959577299A7A1B008337A9 /* DataController.swift in Sources */,
 				0E95958B299DC2A9008337A9 /* DiagramContainer.swift in Sources */,
 				0E959586299D9A84008337A9 /* PieceOfDiagram.swift in Sources */,
-				0E95958F299DCA16008337A9 /* ResultSearch.swift in Sources */,
+				0E95958F299DCA16008337A9 /* ResultSearchView.swift in Sources */,
 				0EDC6EDC2997BF9F00A17AC1 /* AboutMeView.swift in Sources */,
 				0EDC6EDE2997C0D700A17AC1 /* DiagramView.swift in Sources */,
 				0EDC6ED12992E1DD00A17AC1 /* NumberFromAPI.swift in Sources */,
