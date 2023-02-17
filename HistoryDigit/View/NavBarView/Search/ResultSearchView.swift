@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct ResultSearchView: View {
-    @Environment(\.managedObjectContext) var moc
-    @Binding var number : NumberFromAPI?
+    @Environment(\.managedObjectContext)
+    var moc
+    
+    @Binding
+    var text : String
+    
+    @Binding
+    var filter: FilterSearch
+    
+    @State
+    private var number: NumberFromAPI?
+    
+    @State
+    private var color: Color?
     
     var body: some View {
         VStack {
@@ -18,25 +30,25 @@ struct ResultSearchView: View {
                 .font(.headline)
 
             Spacer()
-            Text(String(number!.number!))
-                .font(.system(size: number!.number! < 1000 ? 130 : 80))
+            Text(String(number?.number ?? 0))
+                .font(.system(size: number?.number ?? 0 < 1000 ? 130 : 80))
                 .font(.headline)
-                .foregroundColor(.blue)
+                .foregroundColor(self.color)
                 .fontWeight(.heavy)
                 .frame(width: 400, height: 150, alignment: .bottom)
             
-            Text(number!.type!)
+            Text(number?.type ?? "Non type")
                 .fontWeight(.heavy)
-                .foregroundColor(.blue)
+                .foregroundColor(self.color)
 
             
             Spacer()
-            Text(number!.text)
-                .font(.system(size: number!.text.count > 30 ? 18 : 30))
+            Text(number?.text ?? "Non text")
+                .font(.system(size: number?.text.count ?? 0 > 30 ? 18 : 30))
                 .multilineTextAlignment(.leading)
                 .frame(width: 300)
                 .lineLimit(nil)
-                .background(.blue)
+                .background(self.color)
                 .foregroundColor(.white)
                 .cornerRadius(10)
                 .padding()
@@ -58,17 +70,39 @@ struct ResultSearchView: View {
             .frame(width: 130, alignment: .center)
             .padding()
         }
+        .onAppear() {
+            switch filter.result {
+            case .math:
+                NumberAPI.shared.getMath(query: text) { insideNumber in
+                    self.number = insideNumber
+                }
+                self.color = .blue
+                
+            case .year:
+                NumberAPI.shared.getYear(query: text) { insideNumber in
+                    self.number = insideNumber
+                }
+                self.color = .green
+
+                
+            case .date:
+                NumberAPI.shared.getDate(query: text) { insideNumber in
+                    self.number = insideNumber
+                }
+                self.color = .red
+                
+            case .trivia:
+                NumberAPI.shared.getTrivia(query: text) { insideNumber in
+                    self.number = insideNumber
+                }
+                self.color = .orange
+            }
+        }
     }
 }
 
 struct ResultSearch_Previews: PreviewProvider {
     static var previews: some View {
-        ResultSearchView(number: .constant(
-            NumberFromAPI(text: "Text for this number Text for this numberText for this numberText for this numberText for this numberText for this numberText for this numberText for this numberText for this numberText for this numberText for this number",
-                          found: true,
-                          number: 3000,
-                          type: TypeNumber.math.value,
-                          date: "121212",
-                          year: "2019")))
+        ResultSearchView(text: .constant("5"), filter: .constant(FilterSearch.shared))
     }
 }

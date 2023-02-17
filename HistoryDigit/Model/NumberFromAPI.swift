@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct NumberFromAPI: Codable {
     
@@ -19,11 +20,20 @@ struct NumberFromAPI: Codable {
 }
 
 class FilterSearch {
-    
+
     static let shared = FilterSearch()
-    var result: TypeNumber?
+    
+    var result: TypeNumber = .math
     
     private init() {}
+    
+    func setResult(type: TypeNumber) {
+        self.result = type
+    }
+    
+    func getResult() -> TypeNumber {
+        return self.result
+    }
 }
 
 enum TypeNumber {

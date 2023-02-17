@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct SearchView: View {
-    @State private var filter = FilterSearch.shared.result
+    
+    @State private var filter = FilterSearch.shared
     @State private var fullText: String = "TEXT"
-    @State private var number: NumberFromAPI?
     
     var body: some View {
         NavigationView {
@@ -37,28 +37,8 @@ struct SearchView: View {
                 Spacer()
                 
                 Button(action: {
-                    switch filter {
-                    case .math:
-                        NumberAPI.shared.getMath(query: fullText) { insideNumber in
-                            self.number = insideNumber
-                        }
-                    case .year:
-                        NumberAPI.shared.getYear(query: fullText) { insideNumber in
-                            self.number = insideNumber
-                        }
-                    case .date:
-                        NumberAPI.shared.getDate(query: fullText) { insideNumber in
-                            self.number = insideNumber
-                        }
-                    case .trivia:
-                        NumberAPI.shared.getTrivia(query: fullText) { insideNumber in
-                            self.number = insideNumber
-                        }
-                    case .none:
-                        print("NONE SWITCH FILTER")
-                    }
                 }, label: {
-                    NavigationLink(destination: ResultSearchView(number: $number)) {
+                    NavigationLink(destination: ResultSearchView(text: $fullText, filter: $filter)) {
                         Text("SEARCH")
                     }
                 })
@@ -68,7 +48,9 @@ struct SearchView: View {
                 .cornerRadius(15)
                 .font(.system(size: 35))
                 Spacer()
-//                Text(filter?.value ?? "NON FILTER")
+                    .onAppear() {
+                        filter.getResult()
+                    }
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {

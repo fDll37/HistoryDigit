@@ -9,8 +9,8 @@ import SwiftUI
 
 struct FilterView: View {
     
-    @State private var sendToSearchResult = FilterSearch.shared.result
-    private var typeArray: [TypeNumber] = [.math, .trivia, .date, .year]
+    @State private var sendToSearchResult = FilterSearch.shared
+    @State private var typeArray: [TypeNumber] = [.math, .trivia, .date, .year]
     @State private var selectIndex = 0
     
     var body: some View {
@@ -31,11 +31,12 @@ struct FilterView: View {
                 .foregroundColor(.black)
                 .font(.headline)
                 .padding(.top, 10)
-            Button("Save choose") {
-                sendToSearchResult = typeArray[selectIndex]
-                print(sendToSearchResult?.value ?? "NON FILTER")
-//                sendToSearchResult = typeArray[selectIndex]
-            }
+            Button({
+                "save filter"
+            }(), action: {
+                sendToSearchResult.setResult(type: typeArray[selectIndex])
+                print("filter after save = \(sendToSearchResult.result.value)")
+            })
             .background(.blue)
             .foregroundColor(.black)
             .fontWeight(.heavy)
