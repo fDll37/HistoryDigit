@@ -10,7 +10,7 @@ import SwiftUI
 struct SearchView: View {
     
     @State private var filter = FilterSearch.shared
-    @State private var fullText: String = "TEXT"
+    @State private var text: String = ""
     
     var body: some View {
         NavigationView {
@@ -26,11 +26,21 @@ struct SearchView: View {
                 ZStack {
                     AnimationView()
                     
-                    TextEditor(text: $fullText)
-                        .keyboardType(.numberPad)
-                        .font(.system(size: 50))
-                        .frame(width: 150, height: 75, alignment: .center)
-                        .fontWeight(.heavy)
+                    ZStack {
+                        if text.isEmpty {
+                            Text("Число")
+                                .font(.system(size: 50))
+                                .opacity(0.6)
+                        }
+                        
+                        TextEditor(text: $text)
+                            .keyboardType(.numberPad)
+                            .font(.system(size: 50))
+                            .frame(width: 150, height: 75, alignment: .center)
+                            .opacity(text.isEmpty ? 0.85 : 1)
+                        
+                    }
+
                 }
                 .frame(width: 400, height: 400, alignment: .center)
                 
@@ -38,13 +48,13 @@ struct SearchView: View {
                 
                 Button(action: {
                 }, label: {
-                    NavigationLink(destination: ResultSearchView(text: $fullText, filter: $filter)) {
+                    NavigationLink(destination: ResultSearchView(text: $text, filter: $filter)) {
                         Text("SEARCH")
                     }
                 })
                 .background(.indigo)
                 .foregroundColor(.black)
-                .fontWeight(.heavy)
+                //                .fontWeight(.heavy)
                 .cornerRadius(15)
                 .font(.system(size: 35))
                 Spacer()
@@ -62,7 +72,7 @@ struct SearchView: View {
                 }
             }
         }
-
+        
     }
 }
 

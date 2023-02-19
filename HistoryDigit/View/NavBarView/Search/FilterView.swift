@@ -39,7 +39,7 @@ struct FilterView: View {
             })
             .background(.blue)
             .foregroundColor(.black)
-            .fontWeight(.heavy)
+//            .fontWeight(.heavy)
             .cornerRadius(5)
             .frame(width: 130, alignment: .center)
         }

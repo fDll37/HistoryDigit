@@ -65,7 +65,7 @@ struct ResultSearchView: View {
             }
             .background(.blue)
             .foregroundColor(.yellow)
-            .fontWeight(.heavy)
+//            .fontWeight(.heavy)
             .cornerRadius(5)
             .frame(width: 130, alignment: .center)
             .padding()

@@ -25,6 +25,7 @@
 		0EDC6ED82993D81800A17AC1 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6ED72993D81800A17AC1 /* SearchView.swift */; };
 		0EDC6EDC2997BF9F00A17AC1 /* AboutMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6EDB2997BF9F00A17AC1 /* AboutMeView.swift */; };
 		0EDC6EDE2997C0D700A17AC1 /* DiagramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6EDD2997C0D700A17AC1 /* DiagramView.swift */; };
+		0EF14CE229A2A3FF00372580 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF14CE129A2A3FF00372580 /* TestView.swift */; };
 		0EFFF9462992B45D0033EDA5 /* HistoryDigitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFF9452992B45D0033EDA5 /* HistoryDigitApp.swift */; };
 		0EFFF9482992B45D0033EDA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFF9472992B45D0033EDA5 /* ContentView.swift */; };
 		0EFFF94A2992B45F0033EDA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EFFF9492992B45F0033EDA5 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		0EDC6ED72993D81800A17AC1 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		0EDC6EDB2997BF9F00A17AC1 /* AboutMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeView.swift; sourceTree = "<group>"; };
 		0EDC6EDD2997C0D700A17AC1 /* DiagramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramView.swift; sourceTree = "<group>"; };
+		0EF14CE129A2A3FF00372580 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		0EFFF9422992B45D0033EDA5 /* HistoryDigit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HistoryDigit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EFFF9452992B45D0033EDA5 /* HistoryDigitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDigitApp.swift; sourceTree = "<group>"; };
 		0EFFF9472992B45D0033EDA5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -138,11 +140,19 @@
 			path = NumberAPI;
 			sourceTree = "<group>";
 		};
+		0EF14CE029A2A3E200372580 /* Test files */ = {
+			isa = PBXGroup;
+			children = (
+				0EDC6ED32992E38700A17AC1 /* testing.playground */,
+				0EF14CE129A2A3FF00372580 /* TestView.swift */,
+			);
+			path = "Test files";
+			sourceTree = "<group>";
+		};
 		0EFFF9392992B45D0033EDA5 = {
 			isa = PBXGroup;
 			children = (
 				0E959582299AA4E5008337A9 /* Numbers.xcdatamodeld */,
-				0EDC6ED32992E38700A17AC1 /* testing.playground */,
 				0EFFF9442992B45D0033EDA5 /* HistoryDigit */,
 				0EFFF9432992B45D0033EDA5 /* Products */,
 			);
@@ -160,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				0E959576299A7A1B008337A9 /* DataController.swift */,
+				0EF14CE029A2A3E200372580 /* Test files */,
 				0E95958A299DC2A9008337A9 /* DiagramContainer.swift */,
 				0EDC6ED42992E87900A17AC1 /* Info.plist */,
 				0EDC6ECD2992E1DD00A17AC1 /* Model */,
@@ -255,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EF14CE229A2A3FF00372580 /* TestView.swift in Sources */,
 				0E959573299A7098008337A9 /* ListView.swift in Sources */,
 				0E959592299EB24C008337A9 /* AnimationView.swift in Sources */,
 				0E959577299A7A1B008337A9 /* DataController.swift in Sources */,
@@ -331,7 +343,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -385,7 +397,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -412,6 +424,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -442,6 +455,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

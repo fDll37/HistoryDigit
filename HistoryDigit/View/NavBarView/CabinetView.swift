@@ -14,6 +14,7 @@ struct CabinetView: View {
         NavigationView {
             VStack {
                 DiagramView()
+                    .padding(.leading, 25)
                 Spacer()
                 HistogramView()
             }
