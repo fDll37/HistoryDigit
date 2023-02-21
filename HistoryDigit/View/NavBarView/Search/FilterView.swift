@@ -12,9 +12,11 @@ struct FilterView: View {
     @State private var sendToSearchResult = FilterSearch.shared
     @State private var typeArray: [TypeNumber] = [.math, .trivia, .date, .year]
     @State private var selectIndex = 0
+    @State private var showPopUp: Bool = false
     
     var body: some View {
         VStack {
+            Spacer()
             Text("Выберите тип числа")
                 .font(.title)
             
@@ -25,34 +27,48 @@ struct FilterView: View {
             }
             .padding()
             .frame(width: 200, height: 150, alignment: .center)
+            .onChange(of: selectIndex) { newValue in
+                showPopUp = false
+            }
             
-            Text("вы выбрали: \(typeArray[selectIndex].value)")
+            Text("Вы выбрали: \(typeArray[selectIndex].value)")
                 .padding()
                 .foregroundColor(.black)
                 .font(.headline)
                 .padding(.top, 10)
-            Button({
-                "save filter"
-            }(), action: {
+            
+            Spacer()
+            
+            if showPopUp && typeArray[selectIndex] == sendToSearchResult.result {
+                Text("Сохранено ✅")
+                    .font(.system(size: 20))
+                    .foregroundColor(.green)
+                    .frame(alignment: .center)
+                
+            }
+            Spacer()
+            
+            Button{
                 sendToSearchResult.setResult(type: typeArray[selectIndex])
-                print("filter after save = \(sendToSearchResult.result.value)")
-            })
+                self.showPopUp = true
+            } label: {
+                Text("Сохранить")
+            }
             .background(.blue)
-            .foregroundColor(.black)
-//            .fontWeight(.heavy)
+            .foregroundColor(.white)
+            .buttonStyle(.borderedProminent)
             .cornerRadius(5)
             .frame(width: 130, alignment: .center)
+            
+            Spacer()
         }
     }
+    
+    
 }
 
 struct FilterView_Previews: PreviewProvider {
     static var previews: some View {
         FilterView()
     }
-}
-
-
-class Filter: ObservableObject {
-    
 }

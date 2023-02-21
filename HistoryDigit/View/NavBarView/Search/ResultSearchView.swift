@@ -69,6 +69,7 @@ struct ResultSearchView: View {
             .cornerRadius(5)
             .frame(width: 130, alignment: .center)
             .padding()
+            .buttonStyle(.borderedProminent)
         }
         .onAppear() {
             switch filter.result {

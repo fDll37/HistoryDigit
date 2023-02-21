@@ -169,13 +169,13 @@
 		0EFFF9442992B45D0033EDA5 /* HistoryDigit */ = {
 			isa = PBXGroup;
 			children = (
-				0E959576299A7A1B008337A9 /* DataController.swift */,
 				0EF14CE029A2A3E200372580 /* Test files */,
-				0E95958A299DC2A9008337A9 /* DiagramContainer.swift */,
 				0EDC6ED42992E87900A17AC1 /* Info.plist */,
 				0EDC6ECD2992E1DD00A17AC1 /* Model */,
 				0EDC6ECF2992E1DD00A17AC1 /* NumberAPI */,
 				0EDC6EC82992E1CC00A17AC1 /* View */,
+				0E95958A299DC2A9008337A9 /* DiagramContainer.swift */,
+				0E959576299A7A1B008337A9 /* DataController.swift */,
 				0EFFF9452992B45D0033EDA5 /* HistoryDigitApp.swift */,
 				0EFFF9472992B45D0033EDA5 /* ContentView.swift */,
 				0EFFF9492992B45F0033EDA5 /* Assets.xcassets */,

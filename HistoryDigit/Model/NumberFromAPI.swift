@@ -36,7 +36,7 @@ class FilterSearch {
     }
 }
 
-enum TypeNumber {
+enum TypeNumber: Equatable {
     case math
     case trivia
     case date

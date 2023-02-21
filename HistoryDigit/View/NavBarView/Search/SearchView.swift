@@ -49,11 +49,12 @@ struct SearchView: View {
                 Button(action: {
                 }, label: {
                     NavigationLink(destination: ResultSearchView(text: $text, filter: $filter)) {
-                        Text("SEARCH")
+                        Text("Поиск")
                     }
                 })
                 .background(.indigo)
                 .foregroundColor(.black)
+                .buttonStyle(.borderedProminent)
                 //                .fontWeight(.heavy)
                 .cornerRadius(15)
                 .font(.system(size: 35))
