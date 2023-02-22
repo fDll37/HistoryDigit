@@ -16,15 +16,23 @@ struct SearchView: View {
         NavigationView {
             
             VStack {
-                Text("Поиск числа")
-                    .font(.title)
-                    .font(.system(size: 50))
-                    .fontWeight(.heavy)
-                    .padding()
-                Text("Чтобы найти число введите его в круге")
-                Spacer()
+                VStack {
+                    Text("Поиск числа")
+                        .font(.title)
+                        .font(.system(size: 50))
+                        .fontWeight(.heavy)
+                        .padding()
+                    Text("Чтобы найти число введите его в круге")
+                    Spacer()
+                }
+                .onTapGesture {
+                    self.hideKeyboard()
+                }
                 ZStack {
                     AnimationView()
+                        .onTapGesture {
+                            self.hideKeyboard()
+                        }
                     
                     ZStack {
                         if text.isEmpty {
@@ -44,25 +52,32 @@ struct SearchView: View {
                 }
                 .frame(width: 400, height: 400, alignment: .center)
                 
-                Spacer()
-                
-                Button(action: {
-                }, label: {
-                    NavigationLink(destination: ResultSearchView(text: $text, filter: $filter)) {
-                        Text("Поиск")
-                    }
-                })
-                .background(.indigo)
-                .foregroundColor(.black)
-                .buttonStyle(.borderedProminent)
-                //                .fontWeight(.heavy)
-                .cornerRadius(15)
-                .font(.system(size: 35))
-                Spacer()
-                    .onAppear() {
-                        filter.getResult()
-                    }
+                VStack {
+                    Spacer()
+                    
+                    Button(action: {
+                    }, label: {
+                        NavigationLink(destination: ResultSearchView(text: $text, filter: $filter)) {
+                            Text("Поиск")
+                        }
+                    })
+                    .background(.indigo)
+                    .foregroundColor(.black)
+                    .buttonStyle(.borderedProminent)
+                    //                .fontWeight(.heavy)
+                    .cornerRadius(15)
+                    .font(.system(size: 35))
+                    Spacer()
+                        .onAppear() {
+                            filter.getResult()
+                        }
+                }
+                .onTapGesture {
+                    self.hideKeyboard()
+                }
+
             }
+
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink(destination: FilterView()) {

@@ -79,23 +79,31 @@ class NumberAPI {
         return decoder
     }()
     
-    
-    func getMath(query: String, completion: @escaping (Number)-> Void ) {
-        let request = TypeAPI.math(query: <#T##String#>)
+    func getDate(query: String, completion: @escaping (NumberFromAPI)-> Void) {
+        let request = TypeAPI.date(query: query).request
+        self.session.dataTask(with: request) { data, response, error in
+            if error == nil {
+                do {
+                    let number = try NumberAPI.shared.jsonDecoder.decode(NumberFromAPI.self, from: data!)
+                    DispatchQueue.main.async {
+                        completion(number)
+                    }
+                } catch {
+                    print(error)
+                    print("JSON Error (DATE)")
+                }
+            }
+            
+        }.resume()
     }
+
     
-    func getTrivia() {
-        
-    }
-    
-    func detDate() {
-        
-    }
-    
-    func getRandom() {
-        
-    }
-    
+}
+
+NumberAPI.shared.getDate(query: "5/12") { number in
+    print(number.number ?? "")
+    print(number.type ?? "non type")
+    print(number.text)
 }
 
 //var ff = TypeAPI.year(query: "1992").fullURL

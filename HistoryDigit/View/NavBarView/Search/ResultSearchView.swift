@@ -71,7 +71,6 @@ struct ResultSearchView: View {
                 if self.number != nil {
                     showPopUp = true
                     let numberMoc = Number(context: moc)
-                    print("save")
                     numberMoc.id = UUID()
                     numberMoc.text = self.number!.text
                     numberMoc.number = String(self.number!.number!)

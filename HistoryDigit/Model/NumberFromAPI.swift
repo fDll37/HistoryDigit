@@ -15,7 +15,7 @@ struct NumberFromAPI: Codable {
     let number: Int?
     let type: String?
     let date: String?
-    let year: String?
+    let year: Int?
 
 }
 

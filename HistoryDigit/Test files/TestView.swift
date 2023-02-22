@@ -3,7 +3,7 @@ import CoreData
 
 struct TestView: View {
 
-    private var element = NumberFromAPI(text: "text for number, text for number, text for number, text for number", found: true, number: 10, type: TypeNumber.trivia.value, date: "", year: "")
+    private var element = NumberFromAPI(text: "text for number, text for number, text for number, text for number", found: true, number: 10, type: TypeNumber.trivia.value, date: "", year: 0)
     
     var body: some View {
         VStack {
@@ -12,7 +12,7 @@ struct TestView: View {
                 .font(.system(size: 40))
                 .padding(.bottom)
 
-            Text(element.text)
+            Text(element.text ?? "")
                 .frame(maxWidth: .infinity, alignment: .topLeading)
                 .padding(.leading)
                 .font(.system(size: 20))

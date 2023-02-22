@@ -35,7 +35,7 @@ struct NumberView: View {
 //                    .padding()
 
             }.onAppear() {
-                NumberAPI.shared.getMath(query: "37") { insideNumber in
+                NumberAPI.shared.getDate(query: "9/9") { insideNumber in
                     self.numberMath = insideNumber
                 }
                 NumberAPI.shared.getTrivia(query: "37") { insideNumber in
