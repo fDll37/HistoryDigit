@@ -55,12 +55,13 @@ struct ResultSearchView: View {
                      
             Spacer()
             Button("Add to ⭐️") {
-                let number = Number(context: moc)
-                number.id = UUID()
-                number.text = self.number!.text
-                number.number = String(self.number!.number!)
-                number.type = self.number!.type!
-                
+                let numberMoc = Number(context: moc)
+                if self.number?.type != nil && self.number?.number != nil {
+                    numberMoc.id = UUID()
+                    numberMoc.text = self.number!.text
+                    numberMoc.number = String(self.number!.number!)
+                    numberMoc.type = self.number!.type!
+                }
                 try? moc.save()
             }
             .background(.blue)
