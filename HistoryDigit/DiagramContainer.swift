@@ -37,7 +37,7 @@ class DiagramContainer: ObservableObject {
             case "year":
                 arrayPercent["year"]! += 1
             default:
-                break
+                print("Non type")
             }
         }
 

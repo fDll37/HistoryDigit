@@ -23,6 +23,9 @@ struct ResultSearchView: View {
     @State
     private var color: Color?
     
+    @State
+    private var showPopUp: Bool = false
+    
     var body: some View {
         VStack {
             Text("Результат поиска:")
@@ -52,17 +55,30 @@ struct ResultSearchView: View {
                 .foregroundColor(.white)
                 .cornerRadius(10)
                 .padding()
-                     
+            
+            Spacer()
+            
+            if showPopUp && self.number != nil {
+                Text("Сохранено ✅")
+                    .font(.system(size: 20))
+                    .foregroundColor(.green)
+                    .frame(alignment: .center)
+                
+            }
+            
             Spacer()
             Button("Add to ⭐️") {
-                let numberMoc = Number(context: moc)
-                if self.number?.type != nil && self.number?.number != nil {
+                if self.number != nil {
+                    showPopUp = true
+                    let numberMoc = Number(context: moc)
+                    print("save")
                     numberMoc.id = UUID()
                     numberMoc.text = self.number!.text
                     numberMoc.number = String(self.number!.number!)
                     numberMoc.type = self.number!.type!
+                    try? moc.save()
                 }
-                try? moc.save()
+
             }
             .background(.blue)
             .foregroundColor(.yellow)
