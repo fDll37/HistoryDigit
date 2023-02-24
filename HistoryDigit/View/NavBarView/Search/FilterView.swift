@@ -10,7 +10,7 @@ import SwiftUI
 struct FilterView: View {
     
     @State private var sendToSearchResult = FilterSearch.shared
-    @State private var typeArray: [TypeNumber] = [.math, .trivia, .date, .year]
+    @State private var typeArray: [TypeNumber] = [.math, .trivia, .date, .year, .random]
     @State private var selectIndex = 0
     @State private var showPopUp: Bool = false
     

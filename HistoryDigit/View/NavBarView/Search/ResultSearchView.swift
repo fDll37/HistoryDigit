@@ -100,7 +100,7 @@ struct ResultSearchView: View {
                     self.number = insideNumber
                 }
                 self.color = .green
-
+                
                 
             case .date:
                 NumberAPI.shared.getDate(query: text) { insideNumber in
@@ -113,6 +113,12 @@ struct ResultSearchView: View {
                     self.number = insideNumber
                 }
                 self.color = .orange
+            
+            case .random:
+                NumberAPI.shared.getRandom { insideNumber in
+                    self.number = insideNumber
+                }
+                
             }
         }
     }

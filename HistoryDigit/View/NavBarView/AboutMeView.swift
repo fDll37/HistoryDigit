@@ -55,7 +55,9 @@ struct AboutMeView: View {
                 
                 Spacer()
                 
-                Rectangle()
+                Image("logo")
+                    .resizable()
+                    .padding()
                     .frame(width: 200, height: 200, alignment: .center)
             }
         }

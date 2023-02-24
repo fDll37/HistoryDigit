@@ -9,7 +9,8 @@ import SwiftUI
 
 struct HistogramView: View {
     
-    @ObservedObject var charDataObj = DiagramContainer()
+    @ObservedObject
+    var charDataObj = DiagramContainer()
     @FetchRequest(sortDescriptors: [])
     var numbers: FetchedResults<Number>
     

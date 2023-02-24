@@ -41,10 +41,12 @@ enum TypeNumber: Equatable {
     case trivia
     case date
     case year
+    case random
     
     var value: String {
         
         switch self {
+        case .random: return "random"
         case .math: return "math"
         case .date: return "date"
         case .year: return "year"
