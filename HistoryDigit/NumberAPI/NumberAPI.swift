@@ -12,7 +12,8 @@ enum TypeAPI {
     case math(query: String)
     case trivia(query: String)
     case date(query: String)
-    case random(query: String)
+    case year(query: String)
+    case random
     
     var baseURL: String {"http://numbersapi.com/"}
     
@@ -21,8 +22,9 @@ enum TypeAPI {
         switch self {
         case .math: return "math"
         case .date: return "date"
-        case .random: return "random"
+        case .year: return "year"
         case .trivia: return "trivia"
+        case .random: return "random"
         }
     }
     
@@ -41,25 +43,29 @@ enum TypeAPI {
         case .math(let query):
             
             let percentEncodedString = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? query
-            url += "\(percentEncodedString)"
+            url += "\(percentEncodedString)/"
             
         case .trivia(let query):
             
             let percentEncodedString = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? query
-            url += "\(percentEncodedString)"
+            url += "\(percentEncodedString)/"
             
         case .date(let query):
             
             let percentEncodedString = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? query
-            url += "\(percentEncodedString)"
+            url += "\(percentEncodedString)/"
             
-        case .random(let query):
+        case .year(let query):
             
             let percentEncodedString = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? query
-            url += "\(percentEncodedString)"
+            url += "\(percentEncodedString)/"
+            
+        case .random:
+            url += ""
         }
         
         url += self.path
+        url += "?json"
         return URL(string: url)!
     }
 }
@@ -70,6 +76,7 @@ enum TypeAPI {
 class NumberAPI {
     
     static let shared = NumberAPI()
+    static var number: Number?
     
     private let session = URLSession.shared
     private let jsonDecoder: JSONDecoder = {
@@ -79,20 +86,95 @@ class NumberAPI {
     }()
     
     
-    func getMath() {
-        
+    func getMath(query: String, completion: @escaping (NumberFromAPI)-> Void ) {
+        let request = TypeAPI.math(query: query).request
+        self.session.dataTask(with: request) { data, response, error in
+            if error == nil {
+                do {
+                    let number = try NumberAPI.shared.jsonDecoder.decode(NumberFromAPI.self, from: data!)
+                    DispatchQueue.main.async {
+                        completion(number)
+                    }
+                } catch {
+                    print(error)
+                    print("JSON Error (MATH)")
+                }
+                
+            }
+            
+        }.resume()
     }
     
-    func getTrivia() {
-        
+    func getTrivia(query: String, completion: @escaping (NumberFromAPI)-> Void ) {
+        let request = TypeAPI.trivia(query: query).request
+        self.session.dataTask(with: request) { data, response, error in
+            if error == nil {
+                do {
+                    let number = try NumberAPI.shared.jsonDecoder.decode(NumberFromAPI.self, from: data!)
+                    DispatchQueue.main.async {
+                        completion(number)
+                    }
+                } catch {
+                    print(error)
+                    print("JSON Error (TRIVIA)")
+                }
+            }
+            
+        }.resume()
     }
     
-    func detDate() {
-        
+    func getDate(query: String, completion: @escaping (NumberFromAPI)-> Void) {
+        let request = TypeAPI.date(query: query).request
+        self.session.dataTask(with: request) { data, response, error in
+            if error == nil {
+                do {
+                    let number = try NumberAPI.shared.jsonDecoder.decode(NumberFromAPI.self, from: data!)
+                    DispatchQueue.main.async {
+                        completion(number)
+                    }
+                } catch {
+                    print(error)
+                    print("JSON Error (DATE)")
+                }
+            }
+            
+        }.resume()
     }
     
-    func getRandom() {
-        
+    func getYear(query: String, completion: @escaping (NumberFromAPI)-> Void) {
+        let request = TypeAPI.year(query: query).request
+        self.session.dataTask(with: request) { data, response, error in
+            if error == nil {
+                do {
+                    let number = try NumberAPI.shared.jsonDecoder.decode(NumberFromAPI.self, from: data!)
+                    DispatchQueue.main.async {
+                        completion(number)
+                    }
+                } catch {
+                    print(error)
+                    print("JSON Error (YEAR)")
+                }
+            }
+            
+        }.resume()
+    }
+    
+    func getRandom(completion: @escaping (NumberFromAPI)-> Void) {
+        let request = TypeAPI.random.request
+        self.session.dataTask(with: request) { data, response, error in
+            if error == nil {
+                do {
+                    let number = try NumberAPI.shared.jsonDecoder.decode(NumberFromAPI.self, from: data!)
+                    DispatchQueue.main.async {
+                        completion(number)
+                    }
+                } catch {
+                    print(error)
+                    print("JSON Error (RANDOM)")
+                }
+            }
+            
+        }.resume()
     }
     
 }

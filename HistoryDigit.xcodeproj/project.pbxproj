@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E95956F299A6EDA008337A9 /* HistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95956E299A6EDA008337A9 /* HistogramView.swift */; };
+		0E959571299A6F24008337A9 /* ElementListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E959570299A6F24008337A9 /* ElementListView.swift */; };
+		0E959573299A7098008337A9 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E959572299A7098008337A9 /* ListView.swift */; };
+		0E959577299A7A1B008337A9 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E959576299A7A1B008337A9 /* DataController.swift */; };
+		0E959584299AA4E5008337A9 /* Numbers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E959582299AA4E5008337A9 /* Numbers.xcdatamodeld */; };
+		0E959586299D9A84008337A9 /* PieceOfDiagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E959585299D9A84008337A9 /* PieceOfDiagram.swift */; };
+		0E959588299DBA51008337A9 /* HistogramBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E959587299DBA51008337A9 /* HistogramBar.swift */; };
+		0E95958B299DC2A9008337A9 /* DiagramContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95958A299DC2A9008337A9 /* DiagramContainer.swift */; };
+		0E95958D299DC424008337A9 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95958C299DC424008337A9 /* FilterView.swift */; };
+		0E95958F299DCA16008337A9 /* ResultSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95958E299DCA16008337A9 /* ResultSearchView.swift */; };
+		0E959592299EB24C008337A9 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E959591299EB24C008337A9 /* AnimationView.swift */; };
+		0EDC6ECB2992E1CC00A17AC1 /* CabinetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6EC92992E1CC00A17AC1 /* CabinetView.swift */; };
+		0EDC6ED12992E1DD00A17AC1 /* NumberFromAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6ECE2992E1DD00A17AC1 /* NumberFromAPI.swift */; };
+		0EDC6ED22992E1DD00A17AC1 /* NumberAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6ED02992E1DD00A17AC1 /* NumberAPI.swift */; };
+		0EDC6ED82993D81800A17AC1 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6ED72993D81800A17AC1 /* SearchView.swift */; };
+		0EDC6EDC2997BF9F00A17AC1 /* AboutMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6EDB2997BF9F00A17AC1 /* AboutMeView.swift */; };
+		0EDC6EDE2997C0D700A17AC1 /* DiagramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC6EDD2997C0D700A17AC1 /* DiagramView.swift */; };
+		0EF14CE829A5911600372580 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF14CE729A5911600372580 /* WebView.swift */; };
+		0EF14CEA29A5919A00372580 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF14CE929A5919A00372580 /* WebViewModel.swift */; };
+		0EF14CED29A5A87B00372580 /* Extension View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF14CEC29A5A87B00372580 /* Extension View.swift */; };
 		0EFFF9462992B45D0033EDA5 /* HistoryDigitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFF9452992B45D0033EDA5 /* HistoryDigitApp.swift */; };
 		0EFFF9482992B45D0033EDA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFF9472992B45D0033EDA5 /* ContentView.swift */; };
 		0EFFF94A2992B45F0033EDA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EFFF9492992B45F0033EDA5 /* Assets.xcassets */; };
@@ -14,6 +34,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E95956E299A6EDA008337A9 /* HistogramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistogramView.swift; sourceTree = "<group>"; };
+		0E959570299A6F24008337A9 /* ElementListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementListView.swift; sourceTree = "<group>"; };
+		0E959572299A7098008337A9 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		0E959576299A7A1B008337A9 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		0E959583299AA4E5008337A9 /* Numbers.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Numbers.xcdatamodel; sourceTree = "<group>"; };
+		0E959585299D9A84008337A9 /* PieceOfDiagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceOfDiagram.swift; sourceTree = "<group>"; };
+		0E959587299DBA51008337A9 /* HistogramBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistogramBar.swift; sourceTree = "<group>"; };
+		0E95958A299DC2A9008337A9 /* DiagramContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramContainer.swift; sourceTree = "<group>"; };
+		0E95958C299DC424008337A9 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		0E95958E299DCA16008337A9 /* ResultSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSearchView.swift; sourceTree = "<group>"; };
+		0E959591299EB24C008337A9 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
+		0EDC6EC92992E1CC00A17AC1 /* CabinetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CabinetView.swift; sourceTree = "<group>"; };
+		0EDC6ECE2992E1DD00A17AC1 /* NumberFromAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberFromAPI.swift; sourceTree = "<group>"; };
+		0EDC6ED02992E1DD00A17AC1 /* NumberAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberAPI.swift; sourceTree = "<group>"; };
+		0EDC6ED42992E87900A17AC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0EDC6ED72993D81800A17AC1 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		0EDC6EDB2997BF9F00A17AC1 /* AboutMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeView.swift; sourceTree = "<group>"; };
+		0EDC6EDD2997C0D700A17AC1 /* DiagramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramView.swift; sourceTree = "<group>"; };
+		0EF14CE729A5911600372580 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		0EF14CE929A5919A00372580 /* WebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
+		0EF14CEC29A5A87B00372580 /* Extension View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension View.swift"; sourceTree = "<group>"; };
 		0EFFF9422992B45D0033EDA5 /* HistoryDigit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HistoryDigit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EFFF9452992B45D0033EDA5 /* HistoryDigitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDigitApp.swift; sourceTree = "<group>"; };
 		0EFFF9472992B45D0033EDA5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,9 +73,95 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E959574299A709D008337A9 /* ListNumbers */ = {
+			isa = PBXGroup;
+			children = (
+				0E959570299A6F24008337A9 /* ElementListView.swift */,
+				0E959572299A7098008337A9 /* ListView.swift */,
+			);
+			path = ListNumbers;
+			sourceTree = "<group>";
+		};
+		0E959575299A70BE008337A9 /* NavBarView */ = {
+			isa = PBXGroup;
+			children = (
+				0E959590299EA88C008337A9 /* Search */,
+				0EDC6EC92992E1CC00A17AC1 /* CabinetView.swift */,
+				0EDC6EDB2997BF9F00A17AC1 /* AboutMeView.swift */,
+			);
+			path = NavBarView;
+			sourceTree = "<group>";
+		};
+		0E959589299DC235008337A9 /* Histogram */ = {
+			isa = PBXGroup;
+			children = (
+				0E959587299DBA51008337A9 /* HistogramBar.swift */,
+				0E95956E299A6EDA008337A9 /* HistogramView.swift */,
+			);
+			path = Histogram;
+			sourceTree = "<group>";
+		};
+		0E959590299EA88C008337A9 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				0E95958C299DC424008337A9 /* FilterView.swift */,
+				0E95958E299DCA16008337A9 /* ResultSearchView.swift */,
+				0EDC6ED72993D81800A17AC1 /* SearchView.swift */,
+				0E959591299EB24C008337A9 /* AnimationView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		0EDC6EC82992E1CC00A17AC1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0EF14CE629A590F100372580 /* WebView */,
+				0E959589299DC235008337A9 /* Histogram */,
+				0E959575299A70BE008337A9 /* NavBarView */,
+				0E959574299A709D008337A9 /* ListNumbers */,
+				0EDC6EDD2997C0D700A17AC1 /* DiagramView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0EDC6ECD2992E1DD00A17AC1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E959585299D9A84008337A9 /* PieceOfDiagram.swift */,
+				0EDC6ECE2992E1DD00A17AC1 /* NumberFromAPI.swift */,
+				0EF14CE929A5919A00372580 /* WebViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0EDC6ECF2992E1DD00A17AC1 /* NumberAPI */ = {
+			isa = PBXGroup;
+			children = (
+				0EDC6ED02992E1DD00A17AC1 /* NumberAPI.swift */,
+			);
+			path = NumberAPI;
+			sourceTree = "<group>";
+		};
+		0EF14CE629A590F100372580 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				0EF14CE729A5911600372580 /* WebView.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		0EF14CEB29A5A86400372580 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0EF14CEC29A5A87B00372580 /* Extension View.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		0EFFF9392992B45D0033EDA5 = {
 			isa = PBXGroup;
 			children = (
+				0E959582299AA4E5008337A9 /* Numbers.xcdatamodeld */,
 				0EFFF9442992B45D0033EDA5 /* HistoryDigit */,
 				0EFFF9432992B45D0033EDA5 /* Products */,
 			);
@@ -51,6 +178,13 @@
 		0EFFF9442992B45D0033EDA5 /* HistoryDigit */ = {
 			isa = PBXGroup;
 			children = (
+				0EF14CEB29A5A86400372580 /* Extension */,
+				0EDC6ED42992E87900A17AC1 /* Info.plist */,
+				0EDC6ECD2992E1DD00A17AC1 /* Model */,
+				0EDC6ECF2992E1DD00A17AC1 /* NumberAPI */,
+				0EDC6EC82992E1CC00A17AC1 /* View */,
+				0E95958A299DC2A9008337A9 /* DiagramContainer.swift */,
+				0E959576299A7A1B008337A9 /* DataController.swift */,
 				0EFFF9452992B45D0033EDA5 /* HistoryDigitApp.swift */,
 				0EFFF9472992B45D0033EDA5 /* ContentView.swift */,
 				0EFFF9492992B45F0033EDA5 /* Assets.xcassets */,
@@ -83,6 +217,8 @@
 			dependencies = (
 			);
 			name = HistoryDigit;
+			packageProductDependencies = (
+			);
 			productName = HistoryDigit;
 			productReference = 0EFFF9422992B45D0033EDA5 /* HistoryDigit.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +247,8 @@
 				Base,
 			);
 			mainGroup = 0EFFF9392992B45D0033EDA5;
+			packageReferences = (
+			);
 			productRefGroup = 0EFFF9432992B45D0033EDA5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +275,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E959573299A7098008337A9 /* ListView.swift in Sources */,
+				0E959592299EB24C008337A9 /* AnimationView.swift in Sources */,
+				0E959577299A7A1B008337A9 /* DataController.swift in Sources */,
+				0E95958B299DC2A9008337A9 /* DiagramContainer.swift in Sources */,
+				0E959586299D9A84008337A9 /* PieceOfDiagram.swift in Sources */,
+				0E95958F299DCA16008337A9 /* ResultSearchView.swift in Sources */,
+				0EF14CED29A5A87B00372580 /* Extension View.swift in Sources */,
+				0EDC6EDC2997BF9F00A17AC1 /* AboutMeView.swift in Sources */,
+				0EDC6EDE2997C0D700A17AC1 /* DiagramView.swift in Sources */,
+				0EDC6ED12992E1DD00A17AC1 /* NumberFromAPI.swift in Sources */,
+				0E95958D299DC424008337A9 /* FilterView.swift in Sources */,
+				0E95956F299A6EDA008337A9 /* HistogramView.swift in Sources */,
+				0EDC6ECB2992E1CC00A17AC1 /* CabinetView.swift in Sources */,
 				0EFFF9482992B45D0033EDA5 /* ContentView.swift in Sources */,
+				0EDC6ED82993D81800A17AC1 /* SearchView.swift in Sources */,
+				0EF14CEA29A5919A00372580 /* WebViewModel.swift in Sources */,
 				0EFFF9462992B45D0033EDA5 /* HistoryDigitApp.swift in Sources */,
+				0E959571299A6F24008337A9 /* ElementListView.swift in Sources */,
+				0E959584299AA4E5008337A9 /* Numbers.xcdatamodeld in Sources */,
+				0EDC6ED22992E1DD00A17AC1 /* NumberAPI.swift in Sources */,
+				0E959588299DBA51008337A9 /* HistogramBar.swift in Sources */,
+				0EF14CE829A5911600372580 /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +353,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +407,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -270,11 +428,13 @@
 				DEVELOPMENT_TEAM = 6RFGZKG2P5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HistoryDigit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,11 +459,13 @@
 				DEVELOPMENT_TEAM = 6RFGZKG2P5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HistoryDigit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +501,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0E959582299AA4E5008337A9 /* Numbers.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0E959583299AA4E5008337A9 /* Numbers.xcdatamodel */,
+			);
+			currentVersion = 0E959583299AA4E5008337A9 /* Numbers.xcdatamodel */;
+			path = Numbers.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0EFFF93A2992B45D0033EDA5 /* Project object */;
 }
