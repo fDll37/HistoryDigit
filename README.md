@@ -7,23 +7,23 @@
 
 Приложение содержит:
 1. Начальный экран приложения. 
-<img src="/gitImage/start.png" width="500">
+<img src="/gitImage/start.png" width="200">
 2. Экран фильтра 
-<img src="/gitImage/filter_1.png" width="500">
-<img src="/gitImage/filter_2.png" width="500">
-<img src="/gitImage/filter_3.png" width="500">
+<img src="/gitImage/filter_1.png" width="200">
+<img src="/gitImage/filter_2.png" width="200">
+<img src="/gitImage/filter_3.png" width="200">
 3. Экран результата поиска. 
-<img src="/gitImage/result_1.png" width="500">
-<img src="/gitImage/result_2.png" width="500">
+<img src="/gitImage/result_1.png" width="200">
+<img src="/gitImage/result_2.png" width="200">
 4. Экран диаграм
-<img src="/gitImage/diagram_1.png" width="500">
-<img src="/gitImage/diagram_2.png" width="500">
+<img src="/gitImage/diagram_1.png" width="200">
+<img src="/gitImage/diagram_2.png" width="200">
 5. Экран списка всех чисел
-<img src="/gitImage/list.png" width="500">
+<img src="/gitImage/list.png" width="200">
 6. Экран с информацией о разработчике
-<img src="/gitImage/about_me.png" width="500">
-<img src="/gitImage/about_me_git.png" width="500">
-<img src="/gitImage/about_me_telegram.png" width="500">
+<img src="/gitImage/about_me.png" width="200">
+<img src="/gitImage/about_me_git.png" width="200">
+<img src="/gitImage/about_me_telegram.png" width="200">
 
 
 Реализовано "под капотом":
